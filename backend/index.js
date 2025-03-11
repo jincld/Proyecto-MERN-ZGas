@@ -6,7 +6,7 @@ import {config} from "./src/config.js";
 
 //crear función que ejecuta el servidor
 async function main() {
-    app.listen(config.PORTS);
+    app.listen(config.PORT);
     console.log("Server running! :D");
 }
 //ejecutar la función
