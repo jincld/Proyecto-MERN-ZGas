@@ -12,5 +12,7 @@ export const config = {
     },
     server: {
         port: process.env.PORT
-    }
+    },
+    secret: process.env.JWK_SECRET,
+    expiresIn: process.env.JWK_EXPIRES
 }
