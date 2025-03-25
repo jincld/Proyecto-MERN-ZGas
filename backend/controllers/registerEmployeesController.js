@@ -29,13 +29,14 @@ registerEmployeesController.register = async (req, res) =>{
             //Qué voy a guardar
             {id: newEmployee._id},
             //Cuál es el secreto
-            config.secret,
+            config.JWT.secret,
             //Cuándo expira
-            {expiresIn: config.expiresIn},
+            {expiresIn: config.JWT.expiresIn},
             //Función flecha
             (error, token) => {
                 if(error) console.log(error)
                     res.cookie("authToken", token)
+                res.json({message: "Empleado registrado"})
             }
         )
     
