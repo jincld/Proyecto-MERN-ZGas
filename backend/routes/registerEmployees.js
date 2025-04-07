@@ -3,6 +3,6 @@ import registerEmployeesController from "../controllers/registerEmployeesControl
 
 const router = express.Router();
 
-router.route("/").post(registerEmployeesController.register)
+router.route("/").post(registerEmployeesController.register);
 
 export default router;
